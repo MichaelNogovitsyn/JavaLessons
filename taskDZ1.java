@@ -9,9 +9,9 @@ public class taskDZ1 {
     public static void main(String[] args) {
         Scanner iScanner = new Scanner(System.in, "Cp866");
         System.out.print("Enter number: ");
-   
+
         int num = iScanner.nextInt();
-        while(num<1){
+        while (num < 1) {
             System.out.println("Enter number more then 0");
             num = iScanner.nextInt();
         }
@@ -21,15 +21,15 @@ public class taskDZ1 {
         System.out.print("Треугольное число 1");
         while (i <= num) {
             sum += i;
-            System.out.printf(" + %d", i);        
+            System.out.printf(" + %d", i);
             i++;
         }
         System.out.printf(" = %d\n", sum);
-        i=1;
+        i = 1;
         System.out.print("n1 1");
         while (i <= num) {
-            n*=i;
-            System.out.printf(" * %d", n);        
+            n *= i;
+            System.out.printf(" * %d", n);
             i++;
         }
         System.out.printf(" = %d\n", n);
