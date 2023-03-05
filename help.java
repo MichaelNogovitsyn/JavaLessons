@@ -25,6 +25,9 @@ public class help {
                 System.out.println("%d",arr3[i][j]); 
             }
         }
+        String[] splitStr = arr.split("\\D+");
+        numbers[i] = Integer.parseInt(splitStr[i]);
+
         //------------------------Функции--------------------------------\\
         static int sum(int a, int b){
             return a+b;
