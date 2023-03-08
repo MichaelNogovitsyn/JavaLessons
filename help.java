@@ -42,6 +42,7 @@ public class help {
         } catch (IOException ex){
             System.out.println(ex.getMessage());
         }
+        File f1 = new File("file.txt");
     }
 }
           
