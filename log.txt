@@ -1,0 +1,26 @@
+мар. 09, 2023 8:22:30 PM taskDZ2_1 main
+INFO: Start
+мар. 09, 2023 8:22:35 PM taskDZ2_1 main
+SEVERE: input array
+мар. 09, 2023 8:22:35 PM taskDZ2_1 main
+INFO: [5, 4, 3, 2, 1]
+мар. 09, 2023 8:22:35 PM taskDZ2_1 sortBubble
+INFO: [4, 5, 3, 2, 1]
+мар. 09, 2023 8:22:35 PM taskDZ2_1 sortBubble
+INFO: [4, 3, 5, 2, 1]
+мар. 09, 2023 8:22:35 PM taskDZ2_1 sortBubble
+INFO: [4, 3, 2, 5, 1]
+мар. 09, 2023 8:22:35 PM taskDZ2_1 sortBubble
+INFO: [4, 3, 2, 1, 5]
+мар. 09, 2023 8:22:35 PM taskDZ2_1 sortBubble
+INFO: [3, 4, 2, 1, 5]
+мар. 09, 2023 8:22:35 PM taskDZ2_1 sortBubble
+INFO: [3, 2, 4, 1, 5]
+мар. 09, 2023 8:22:35 PM taskDZ2_1 sortBubble
+INFO: [3, 2, 1, 4, 5]
+мар. 09, 2023 8:22:35 PM taskDZ2_1 sortBubble
+INFO: [2, 3, 1, 4, 5]
+мар. 09, 2023 8:22:35 PM taskDZ2_1 sortBubble
+INFO: [2, 1, 3, 4, 5]
+мар. 09, 2023 8:22:35 PM taskDZ2_1 sortBubble
+INFO: [1, 2, 3, 4, 5]

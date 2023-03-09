@@ -3,6 +3,8 @@ import java.io.*;
 
 public class Ex003_tryDemo {
     public static void main(String[] args) {
+
+        
         String line = "empty23";
         try {
             String pathProject = System.getProperty("user.dir");
