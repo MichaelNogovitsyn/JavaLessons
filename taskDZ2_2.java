@@ -26,13 +26,17 @@ public class taskDZ2_2 {
         String grades = "grades.txt";
         try (BufferedReader reader = new BufferedReader(new FileReader(grades))) {
             String line;
-            while ((line = reader.readLine()) != null) {
-                String[] splitLine = line.split(":");
-                String[] splitLine2 = Arrays.toString(splitLine).split(",");
-                sb.append("Студент"+splitLine2[1]+"\n");
-                System.out.println(Arrays.toString(splitLine2));               
+            while ((line = reader.readLine()) != null){
+                
+                String lineNew = line.replace('"', ' ');                
+                String[] splitLine = lineNew.split(":");
+                String surname = splitLine[1].replaceAll(", оценка","");
+                String grade = splitLine[2].replaceAll(" , предмет", "");
+                String subject = splitLine[3];  
+                sb.append("Студент"+surname+"получил"+grade+"по предмету"+subject+"\n");                
             }
             System.out.println(sb);
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
