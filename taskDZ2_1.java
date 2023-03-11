@@ -33,10 +33,10 @@ public class taskDZ2_1 {
     public static void main(String[] args) throws IOException {
         FileHandler fh = new FileHandler("log.txt");
         logger.addHandler(fh);
-
         SimpleFormatter sFormat = new SimpleFormatter();
         fh.setFormatter(sFormat);
         logger.log(Level.INFO, "Start");
+        
         Scanner iScanner = new Scanner(System.in);
         String numStr = null;
 
