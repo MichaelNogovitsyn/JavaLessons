@@ -14,10 +14,10 @@ import java.util.logging.FileHandler;
 
 public class taskDZ3 {
 
-    private static Logger logger = Logger.getLogger(taskDZ2_1.class.getName());
+    private static Logger logger = Logger.getLogger(taskDZ3.class.getName());
     FileHandler fh = new FileHandler("log.txt");
     public static void main(String[] args) throws IOException{
-        FileHandler fh = new FileHandler("log.txt");
+        FileHandler fh = new FileHandler("log.txt",true);
         logger.addHandler(fh);
         SimpleFormatter sFormat = new SimpleFormatter();
         fh.setFormatter(sFormat);
@@ -27,12 +27,12 @@ public class taskDZ3 {
         Scanner iScanner =new Scanner(System.in);
         System.out.print(" Enter number: ");
         double num1 = iScanner.nextInt();
-        logger.log(Level.INFO,"User input number1");
+        logger.log(Level.INFO,"User input number1: "+ num1);
         System.out.print(" Enter operation: ");
         String operation = iScanner.next();
         System.out.print(" Enter number: ");
         double num2 = iScanner.nextInt();
-        logger.log(Level.INFO,"User input number2");
+        logger.log(Level.INFO,"User input number2: "+ num2);
         double result=0;
 
         switch (operation) {
@@ -57,6 +57,7 @@ public class taskDZ3 {
             logger.log(Level.INFO," Oooops, something wrong !");
                 break;
         }
+        logger.log(Level.INFO,"Result: " + result );
         System.out.printf(" Result = %.3f",result);
 
     }

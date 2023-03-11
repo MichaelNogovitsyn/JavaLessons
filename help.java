@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -43,7 +44,17 @@ public class help {
             System.out.println(ex.getMessage());
         }
         File f1 = new File("file.txt");
+      //-------------------------Коллекции--------------------------------\\\
+ArrayList list = new ArrayList();
+ArrayList<Integer> list2 = new ArrayList<Integer>();
+ArrayList<Integer> list3 = new ArrayList<Integer>(10);
+list.add(2809);
+list.add("Hi");
+list.add(3.3);
+for (Object o:list){
+    System.out.println(o);
+}
+
+
     }
 }
-          
-

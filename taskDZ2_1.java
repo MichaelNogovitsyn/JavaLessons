@@ -28,7 +28,7 @@ public class taskDZ2_1 {
     }
 
     private static Logger logger = Logger.getLogger(taskDZ2_1.class.getName());
-    FileHandler fh = new FileHandler("log.txt");
+    FileHandler fh = new FileHandler("log.txt",true);
 
     public static void main(String[] args) throws IOException {
         FileHandler fh = new FileHandler("log.txt");

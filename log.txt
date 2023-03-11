@@ -6,3 +6,17 @@ INFO: User input number1
 INFO: User input number2
 мар. 11, 2023 9:22:26 AM taskDZ3 main
 INFO: User input operation: +
+мар. 11, 2023 8:36:29 PM taskDZ3 main
+INFO: Start
+мар. 11, 2023 8:36:32 PM taskDZ3 main
+INFO: User input number11.0
+мар. 11, 2023 8:38:43 PM taskDZ3 main
+INFO: Start
+мар. 11, 2023 8:38:45 PM taskDZ3 main
+INFO: User input number1 2.0
+мар. 11, 2023 8:38:57 PM taskDZ3 main
+INFO: User input number2 16.0
+мар. 11, 2023 8:38:57 PM taskDZ3 main
+INFO: User input operation: /
+мар. 11, 2023 8:38:57 PM taskDZ3 main
+INFO: Result: 32.0
