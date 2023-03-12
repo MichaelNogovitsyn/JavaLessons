@@ -48,13 +48,22 @@ public class help {
 ArrayList list = new ArrayList();
 ArrayList<Integer> list2 = new ArrayList<Integer>();
 ArrayList<Integer> list3 = new ArrayList<Integer>(10);
+ArrayList<String> arr5 = new ArrayList<>(Arrays.asList("Merkury","Venus","Earth"));
+ArrayList<Cat> catsList = new ArrayList<>(Arrays.asList(catsArray));
 list.add(2809);
 list.add("Hi");
 list.add(3.3);
+list.set(2,9);
 for (Object o:list){
     System.out.println(o);
+    if (list.get(i) instanceof Integer){
+        list.remove(i);
+        list.clear();
+        i--;
 }
+int index= list.indexOf(3);
 
+}
 
     }
 }
