@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -50,6 +52,8 @@ ArrayList<Integer> list2 = new ArrayList<Integer>();
 ArrayList<Integer> list3 = new ArrayList<Integer>(10);
 ArrayList<String> arr5 = new ArrayList<>(Arrays.asList("Merkury","Venus","Earth"));
 ArrayList<Cat> catsList = new ArrayList<>(Arrays.asList(catsArray));
+Integer notSortArray[] = array.toArray(new Integer[array.size()]);
+
 list.add(2809);
 list.add("Hi");
 list.add(3.3);
@@ -62,8 +66,12 @@ for (Object o:list){
         i--;
 }
 int index= list.indexOf(3);
+Queue<Integer> queue=new LinkedList<Integer>();
+queue.add(1);
+queue.remove();
+ 
+
 
 }
-
     }
 }
