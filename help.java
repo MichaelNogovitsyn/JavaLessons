@@ -69,9 +69,21 @@ int index= list.indexOf(3);
 Queue<Integer> queue=new LinkedList<Integer>();
 queue.add(1);
 queue.remove();
- 
+      //-------------------------Коллекции Map--------------------------------\\\ 
+Map<Integer, String> db = new HashMap<>(100);
+Map<Integer, String> db2 = new HashMap<>(100, 1.0f);
+        db.putIfAbsent(1, "один");
+        db.put(2, "два");
+        db.put(3, "три");
+        System.out.println(db); 
 
+        for (var item : db.entrySet()) {
+            System.out.printf("[%d: %s]\n", item.getKey(), item.getValue());
+        }
 
+        Map<String, Collection<Integer>> data = new HashMap<String, Collection<Integer>>();
+            data.put(surname, new ArrayList<Integer>());
+            data.get(surname).add(phoneNum);
 }
     }
 }
