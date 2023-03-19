@@ -30,7 +30,17 @@ public class help {
         }
         String[] splitStr = arr.split("\\D+");
         numbers[i] = Integer.parseInt(splitStr[i]);
-
+//-----------------------------------------------------
+        public static void main(String[] args) {
+            int N = 8;
+            char[][] board = new char[N ][N ];        
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < N; j++) {
+                    board[i][j] = '0';
+                }
+            }
+            printMatrix(board);
+        }
         //------------------------Функции--------------------------------\\
         static int sum(int a, int b){
             return a+b;
@@ -84,6 +94,23 @@ Map<Integer, String> db2 = new HashMap<>(100, 1.0f);
         Map<String, Collection<Integer>> data = new HashMap<String, Collection<Integer>>();
             data.put(surname, new ArrayList<Integer>());
             data.get(surname).add(phoneNum);
+//-------------------------Сортировка Map---------------------
+/* import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.stream.Collectors; */
+            Map<String,Integer> sortedMap = data.entrySet().stream()
+            .sorted(Comparator.comparingInt(e-> e.getValue()))
+            .collect(Collectors.toMap( 
+                Map.Entry::getKey, 
+                Map.Entry::getValue,
+                (a,b) -> {
+                    throw new AssertionError();
+                },
+                LinkedHashMap::new));
+            sortedMap.entrySet().forEach(System.out::println);
 }
     }
 }
