@@ -101,6 +101,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.stream.Collectors; */
+
+// 1 variant
+Set treeSetSorted = new TreeSet<>(Comparator.reverseOrder());
+// 2 variant
             Map<String,Integer> sortedMap = data.entrySet().stream()
             .sorted(Comparator.comparingInt(e-> e.getValue()))
             .collect(Collectors.toMap( 
