@@ -118,3 +118,10 @@ Set treeSetSorted = new TreeSet<>(Comparator.reverseOrder());
 }
     }
 }
+
+      //-------------------------Коллекции Set--------------------------------\\\
+        for (var note : noteSet) 
+                { 
+                    if(note.ram>minVal){
+                        System.out.println(note);
+                    }  } 
