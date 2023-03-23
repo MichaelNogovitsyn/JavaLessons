@@ -115,20 +115,24 @@ public class Programm {
                 }
                 break;
             case 4:
-            System.out.println("Введите цвет: white, blue, black, red");
-            color = scn.next();
-            for (var note : noteSet) {
-                if (note.color.toLowerCase().contains(color.toLowerCase())) {
-                    noteFiltered.put(note.id, note);
+                System.out.println("Введите цвет: white, blue, black, red");
+                color = scn.next();
+                for (var note : noteSet) {
+                    if (note.color.toLowerCase().contains(color.toLowerCase())) {
+                        noteFiltered.put(note.id, note);
+                    }
                 }
-            }
                 break;
             default:
                 break;
         }
-        System.out.println("Вот подходящие модели:");
-        for (var item : noteFiltered.entrySet()) {
-            System.out.println(item.getValue());
+        if (!noteFiltered.isEmpty()) {
+            System.out.println("Вот подходящие модели:");
+            for (var item : noteFiltered.entrySet()) {
+                System.out.println(item.getValue());
+            }
+        } else {
+            System.out.println("Таких моделей нет");
         }
     }
 }
