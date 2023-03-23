@@ -26,6 +26,7 @@ NoteBook notebook5 = new NoteBook
 вывод подходящих */
 import DZ6notebooks.NoteBook;
 import java.util.*;
+
 public class Programm {
     public static void main(String[] args) {
         int id = 1;
@@ -71,7 +72,7 @@ public class Programm {
         notebook5.addID(id++);
 
         Set<Notebook> noteSet = new HashSet<Notebook>();
-        Map<Integer,Notebook> noteFiltered = new HashMap<>(); 
+        Map<Integer, Notebook> noteFiltered = new HashMap<>();
         noteSet.add(notebook1);
         noteSet.add(notebook2);
         noteSet.add(notebook3);
@@ -82,35 +83,52 @@ public class Programm {
                 "Здравствуйте! Введите цифру, соответствующую необходимому критерию: \n1 - ОЗУ\n2 - Объем ЖД\n3 - Операционная система\n4 - Цвет");
         int key = scn.nextInt();
         int minVal = 0;
-
+        String typeOS = "";
+        String color = "";
         switch (key) {
             case 1:
                 System.out.println("Введите минимальный обьем ОЗУ");
                 minVal = scn.nextInt();
-                for (var note : noteSet) 
-                { 
-                    if(note.ram>=minVal){
+                for (var note : noteSet) {
+                    if (note.ram >= minVal) {
                         noteFiltered.put(note.id, note);
                     }
-                   
-                }   
+
+                }
                 break;
             case 2:
-
+                System.out.println("Введите минимальный обьем ЖД");
+                minVal = scn.nextInt();
+                for (var note : noteSet) {
+                    if (note.vd >= minVal) {
+                        noteFiltered.put(note.id, note);
+                    }
+                }
                 break;
             case 3:
-
+                System.out.println("Введите тип ОС, Windows или Mac");
+                typeOS = scn.next();
+                for (var note : noteSet) {
+                    if (note.os.toLowerCase().contains(typeOS.toLowerCase())) {
+                        noteFiltered.put(note.id, note);
+                    }
+                }
                 break;
             case 4:
-
+            System.out.println("Введите цвет: white, blue, black, red");
+            color = scn.next();
+            for (var note : noteSet) {
+                if (note.color.toLowerCase().contains(color.toLowerCase())) {
+                    noteFiltered.put(note.id, note);
+                }
+            }
                 break;
             default:
                 break;
         }
         System.out.println("Вот подходящие модели:");
-        for (var item : noteFiltered.entrySet()) 
-        {
-        System.out.println(item.getValue());    
+        for (var item : noteFiltered.entrySet()) {
+            System.out.println(item.getValue());
         }
     }
 }
