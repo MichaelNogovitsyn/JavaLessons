@@ -85,6 +85,7 @@ public class Programm {
         int minVal = 0;
         String typeOS = "";
         String color = "";
+    
         switch (key) {
             case 1:
                 System.out.println("Введите минимальный обьем ОЗУ");

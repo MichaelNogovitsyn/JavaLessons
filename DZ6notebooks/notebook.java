@@ -13,6 +13,9 @@ public class Notebook {
         return "Brend - "+model + ", OS - " + os + ", color - " + color + ", Ram - " + ram + "GB" +", HDD - " + vd+"GB.";
     }
 
+    /**
+     * @return name OS
+     */
     public String getOs() {
         return os;
     }
