@@ -6,6 +6,7 @@ public class Ex002_fileSystemDemo {
         String pathProject = System.getProperty("user.dir");
         String pathFile = pathProject.concat("/file.txt");
         File f3 = new File(pathFile);
+        System.out.println(pathProject);
         System.out.println(f3.getAbsolutePath());
 
         System.out.println(pathFile);

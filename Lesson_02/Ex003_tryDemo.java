@@ -30,9 +30,9 @@ public class Ex003_tryDemo {
                 fileWriter.append("new line");
                 fileWriter.flush();
                 fileWriter.close();
-                // BufferedReader bufReader = new BufferedReader(new FileReader(file));
-                // line = bufReader.readLine();
-                // bufReader.close();
+                BufferedReader bufReader = new BufferedReader(new FileReader(file));
+                line = bufReader.readLine();
+                bufReader.close();
             }
         } catch (Exception e) {
             //e.printStackTrace();
