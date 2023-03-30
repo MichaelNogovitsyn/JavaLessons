@@ -1,10 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Member extends Human{
+public class Member extends Human {
     private Member father;
     private Member mother;
-    private List<Member> children=new ArrayList<>();
+    private List<Member> children = new ArrayList<>();
+
+    public Member() {
+    }
 
     public Member(int yearBirth, int yearDeath, String fio, Gender gender, Member father, Member mother) {
         setFio(fio);
@@ -12,8 +15,7 @@ public class Member extends Human{
         setYearDeath(yearDeath);
         this.father = father;
         this.mother = mother;
-        if (!(father==null))
-        {
+        if (!(father == null)) {
             father.addChild(this);
         }
     }
@@ -34,7 +36,6 @@ public class Member extends Human{
         this.mother = mother;
     }
 
-
     public List<Member> getChildren() {
         return children;
     }
@@ -42,11 +43,13 @@ public class Member extends Human{
     public void addChild(Member child) {
         this.children.add(child);
     }
+
     public void addChild(List<Member> children) {
         this.children.addAll(children);
     }
 
     public String toString() {
-        return getFio()+" - годы жизни("+getYearBirth()+"-"+getYearDeath()+")";
+        //return getFio() + " - годы жизни(" + getYearBirth() + "-" + getYearDeath() + ")" + "Дети: " + getChildren();
+        return getFio() + " - годы жизни(" + getYearBirth() + "-" + getYearDeath() + ")";
     }
 }
