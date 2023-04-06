@@ -9,6 +9,6 @@ public class Ex004 {
         int year = 1990;
         Integer[] date = { day, month, year };
         List<Integer> d = Arrays.asList(date);
-        System.out.println(d); // [29, 9, 1990]
+        System.out.println(date[0]+" "+date[1]); // [29, 9, 1990]
     }
 }
