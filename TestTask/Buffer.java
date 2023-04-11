@@ -1,58 +1,37 @@
-/**
- * Buffer
- */
-public class Buffer {
+package TestTask;
+import java.util.Arrays;
 
-    public CircularBuffer(int capacity) {
-        this.capacity = (capacity < 1) ? DEFAULT_CAPACITY : capacity;
-        this.data = (E[]) new Object[this.capacity];
-        this.readSequence = 0;
-        this.writeSequence = -1;
-    }
+/*      Этот код реализует скользящий буфер на 10 последних значений 
+        и отсекает минимальное и максимальное значение. 
+        Затем он вычисляет медиану, среднее арифметическое и дисперсию по 
+        оставшимся значениям. */
 
-
-public boolean offer(E element) {
-    boolean isFull = (writeSequence - readSequence) + 1 == capacity;
-    if (!isFull) {
-        int nextWriteSeq = writeSequence + 1;
-        data[nextWriteSeq % capacity] = element;
-        writeSequence++;
-        return true;
-    }
-    return false;
-}
-@Test
-public void givenCircularBuffer_whenAnElementIsEnqueued_thenSizeIsOne() {
-    CircularBuffer buffer = new CircularBuffer<>(defaultCapacity);
-
-    assertTrue(buffer.offer("Square"));
-    assertEquals(1, buffer.size());
-}
-public E poll() {
-    boolean isEmpty = writeSequence < readSequence;
-    if (!isEmpty) {
-        E nextValue = data[readSequence % capacity];
-        readSequence++;
-        return nextValue;
-    }
-    return null;
-}
-@Test
-public void givenCircularBuffer_whenAnElementIsDequeued_thenElementMatchesEnqueuedElement() {
-    CircularBuffer buffer = new CircularBuffer<>(defaultCapacity);
-    buffer.offer("Triangle");
-    String shape = buffer.poll();
-
-    assertEquals("Triangle", shape);
-}
-private volatile int writeSequence = -1, readSequence = 0;
-
-public void run() {
-    for (int i = 0; i < items.length;) {
-        if (buffer.offer(items[i])) {
-           System.out.println("Produced: " + items[i]);
-            i++;
+    public class Buffer {
+        private static final int BUFFER_SIZE = 10;
+        private int[] buffer = new int[BUFFER_SIZE];
+        private int index = 0;
+    
+        public void PutData(int input) {
+            buffer[index] = input;
+            index = (index + 1) % BUFFER_SIZE;
+    
+            int[] sortedBuffer = Arrays.copyOf(buffer, BUFFER_SIZE);
+            Arrays.sort(sortedBuffer);
+    
+            double median = (sortedBuffer[BUFFER_SIZE / 2] + sortedBuffer[(BUFFER_SIZE - 1) / 2]) / 2.0;
+            double sum = 0;
+            for (int i = 1; i < BUFFER_SIZE - 1; i++) {
+                sum += sortedBuffer[i];
+            }
+            double mean = sum / (BUFFER_SIZE - 2);
+            double variance = 0;
+            for (int i = 1; i < BUFFER_SIZE - 1; i++) {
+                variance += (sortedBuffer[i] - mean) * (sortedBuffer[i] - mean);
+            }
+            variance /= (BUFFER_SIZE - 3);
+    
+            System.out.println("Медиана: " + median);
+            System.out.println("Среднее: " + mean);
+            System.out.println("Дисперсия: " + variance);
         }
     }
-}
-}
