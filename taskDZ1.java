@@ -26,7 +26,7 @@ public class taskDZ1 {
         }
         System.out.printf(" = %d\n", sum);
         i = 1;
-        System.out.print("n1 1");
+        System.out.print("n! 1");
         while (i <= num) {
             n *= i;
             System.out.printf(" * %d", n);

@@ -1,11 +1,5 @@
 
-/* Реализовать простой калькулятор (+ - / *)
-Ввод числа ->
-Ввод знака ->
-Ввод числа -> 
-3*дополнительно. К калькулятору из предыдущего дз добавить логирование.
-1 + 3 = 4
-4 + 3 = 7 */
+/* 3) В калькулятор добавьте возможность отменить последнюю операцию. */
 import java.io.IOException;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -38,7 +32,7 @@ public class taskDZ4_3 {
         System.out.print(" cancel - отмена, q - выход\n");
 
         while (!(operation.equals("q"))) {        
-            System.out.print(" Enter operation: ");
+            System.out.print(" Enter operation: + - / *, cancel: ");
             operation = iScanner.next();
             if (!((operation.equals("cancel"))|(operation.equals("q")))) 
             {
