@@ -67,7 +67,7 @@ public class main {
         
         System.out.println("Здравствуйте! Введите цифру, соответствующую необходимому критерию: \n1 - ОЗУ\n2 - Объем ЖД\n3 - Операционная система\n4 - Цвет");         
         int key = scn.nextInt();
-        int=minVal;
+        int minVal;
         switch (key) {
             case 1:
 

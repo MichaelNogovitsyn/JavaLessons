@@ -5,6 +5,7 @@ public class Notebook {
 
     int ram = 1;
     int vd = 1;
+    int id = 1;
     String os = "no os";
     String color = " ";
     String model="noname";
@@ -50,6 +51,9 @@ public class Notebook {
     }
     public void addVD(int name) {
         vd= name;
+    }
+    public void addID(int id) {
+        this.id=id;
     }
 
 }
