@@ -1,0 +1,40 @@
+mi:~/dz2$ cat >file1
+text1
+mi:~/dz2$ cat >file2
+text2
+mi:~/dz2$ cat >file1
+text1
+mi:~/dz2$ cat file1 file2 file3
+mi:~/dz2$ cat file3
+mi:~/dz2$ mv file3 newfile3
+mi:~/dz2$ touch f1
+mi:~/dz2$ touch f2
+mi:~/dz2$ mkdir 1
+mi:~/dz2$ mv f1 f2 1/
+mi:~/dz2$ rm -r *
+mi:~/dz2$ touch file1
+mi:~/dz2$ echo "text" > file1
+mi:~/dz2$ cp file1 file2
+mi:~/dz2$ ln -s file1 file3
+mi:~/dz2$ ln file1 file4
+mi:~/dz2$ ls -il
+mi:~/dz2$ rm file1
+mi:~/dz2$ ls
+символьная ссылка file3 сломалась
+
+mi:~/dz2$ mv file2 newfile2
+mi:~/dz2$ mv file4 new file4
+mi:~/dz2$ ln -s newfile2 linkfile2
+mi:~/dz2$ mv linkfile2 ~
+
+qicC16-qm3zJ
+
+S82s9w64Km!8
+
+
+
+
+
+
+
+
