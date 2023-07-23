@@ -70,7 +70,7 @@ public class RBTree {
 // случай 2
         // когда левый ребенок, а также левый внук выделены красным цветом
         if (isRed(myNode.left) && isRed(myNode.left.left)) {
-// Повернуть узел в право
+// Повернуть узел вправо
             myNode = rotateRight(myNode);
             swapColors(myNode, myNode.right);
         }
@@ -109,13 +109,13 @@ public class RBTree {
 
         char ch;
         do {
-            System.out.println("Введите целое число");
+            System.out.println("Введите целое число: ");
 
             int num = scan.nextInt();
             root = node.insert(root, num);
 
             node.inorder(root);
-            System.out.println("\nВы хотите продолжить? (введите y или n)");
+            System.out.println("\nВы хотите продолжить?:  Y/N");
             ch = scan.next().charAt(0);
         } while (ch == 'Y' || ch == 'y');
     }
